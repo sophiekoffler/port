@@ -49,7 +49,7 @@ document.body.onload = function(){
 
 let currSection = "#about";
 
-document.getElementById("about").addEventListener('touchend', e => { document.getElementById("portfolioL").classList.remove("current");
+document.getElementById("about").addEventListener('touchstart', e => { document.getElementById("portfolioL").classList.remove("current");
   document.getElementById("aboutL").classList.add("current");
   currSection = "#about";
 
@@ -61,7 +61,7 @@ document.getElementById("about").addEventListener('mouseenter', e => { document.
 
 });
 
-document.getElementById("contact").addEventListener('touchend', e => {
+document.getElementById("contact").addEventListener('touchstart', e => {
 console.log("moues entered");  document.getElementById("portfolioL").classList.remove("current");
   document.getElementById("contactL").classList.add("current");
   currSection = "#contact";
@@ -74,6 +74,15 @@ console.log("moues entered");  document.getElementById("portfolioL").classList.r
   currSection = "#contact";
 
 });
+
+document.getElementById("portfolio").addEventListener('touchstart', e => {
+ document.getElementById('contactL').classList.remove("current");
+document.getElementById('aboutL').classList.remove("current");
+  document.getElementById("portfolioL").classList.add("current");
+  currSection = "#portfolio";
+
+});
+
 document.getElementById("portfolio").addEventListener('mouseenter', e => {
 console.log("moues entered");  document.getElementById('contactL').classList.remove("current");
 document.getElementById('aboutL').classList.remove("current");
@@ -81,13 +90,7 @@ document.getElementById('aboutL').classList.remove("current");
   currSection = "#portfolio";
 
 });
-document.getElementById("portfolio").addEventListener('touchend', e => {
- document.getElementById('contactL').classList.remove("current");
-document.getElementById('aboutL').classList.remove("current");
-  document.getElementById("portfolioL").classList.add("current");
-  currSection = "#portfolio";
 
-});
 let mainNavLinks = document.querySelectorAll("nav ul li a");
 let mainSections = document.querySelectorAll("body section");
 //console.log("mainNavLinks "+ JSON.stringify(mainNavLinks));
