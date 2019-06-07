@@ -1,0 +1,10 @@
+main {width:80vw; height:100vh;border:black solid 1px;
+        margin:0 auto;padding:2rem;}
+button {padding:1.5rem;margin:1rem;}
+#slider {width:10rem; height:10rem; background-color:blue;
+          margin:2rem;
+        transition:all 0.3s ease .5s}
+#slider.slidRight {
+  background-color:red;
+  margin-left=50%;
+}

@@ -1,0 +1,339 @@
+$color1 :  rgb(111,132,207);
+$color2 : rgb(125, 176,232);
+$color3 :rgb(151,226,255);
+$color4: rgb(125,229,232);
+ $color5: rgb(138,255,227);
+$darkBlue: rgb(31,35,99);
+$color6 : #F1DD63;
+$color7 : #A79950;
+$color8 : #CBBA7F;
+$color9 : #D98168;
+$color10: #73463D;
+$color12: rgb(229,198,125);
+$color13:#573AE8;
+html,body{height:100%;}
+body {font-size: 16px;
+      background-color: white;/*$color2;*/
+      color:$darkBlue;
+      margin:0 auto;
+      }
+.horizontal {display:flex;
+            flex-direction: row;}
+.vertical {display:flex;
+          flex-direction:column;}
+.g {display:grid;}
+.mobile,.mobileNav{display:none;}
+header {padding:.5rem 0 .5rem 0;
+        top: 0;
+        left:0;
+        width:100%;
+        position: fixed;
+        z-index:15;
+        background-color:white;
+        color:$darkBlue;
+        font-family:"Playfair Display";
+        border-bottom:$darkBlue 1px solid;
+      }
+#headerContent {margin: 0 auto;
+                border-radius: 50px 30px;
+                width:65%;
+                border: 2px solid $darkBlue;
+                border-top:none;
+                border-bottom:none;
+                padding: .5rem 0 .5rem 0;
+                justify-content: center;
+                }
+
+nav ul li {display:inline;
+          font-size: 2rem;
+          margin: 1.5rem 1.5rem 1.5rem 0;
+          }
+nav ul li:last-of-type {margin-right:0;}
+
+a {text-decoration: none;
+    color:$color13;
+  }
+nav a {color:#141b86}
+nav a:hover {color:$color13};
+main {margin-top:3.9rem;
+      margin-bottom:2rem;
+      font-family: "Roboto Mono";
+
+      border-top:none;
+      grid-template-columns: .5rem 3rem 1fr .5rem;}
+#aboutCC {justify-content: center;
+align-items: center;}
+#about {width:90vw;
+
+        margin:10rem auto 7rem auto;
+
+        align-items: center;
+        color:$darkBlue;}
+#aboutC {align-items:center;
+        padding-right:4rem;
+        padding-bottom:1rem;
+        height:63vh;
+        min-height:34rem;
+        background-color:$color2;
+        border:$darkBlue solid 1.5px;}
+
+#aboutImg {float:left;
+          width:300px;}
+.element {
+	shape-outside: ellipse(144px 251px at 52.44% 50.77%);
+	shape-image-threshold: 0.5;}
+
+#aboutI {position:relative;
+  display:block;
+    align-self:center;
+    padding-top:8rem;
+    margin-left:1rem;}
+
+
+#about span{      font-size: 1.25rem;
+                  line-height:1.5;}
+.scroll {font-family: "Dancing Script";
+        text-align:right;
+        font-size: 2rem;
+        padding-right:5rem;
+        padding-top:5rem;}
+
+
+#portfolio {border: solid 3px $color2;
+            margin:0 2rem ;
+            margin-top:-3rem;}
+#portfolio h1 {margin-top:1rem;
+              color:$color13;
+              text-align: center;
+              padding: 1rem 0 1rem 0;
+              font-size: 2.5rem;
+              font-weight: bold;
+            font-family:"Playfair Display";
+
+            }
+
+#portfolio a {color:$color13;}
+.projArr p {padding: 1rem 3rem;}
+
+a:hover,.pL:hover {color:$color13; }
+
+#projectC {height:70vh;
+          width:90%;margin:1rem auto;
+          //border:$darkBlue solid 1px;
+
+          justify-content: space-around;}
+#pImg {background-image: url("../images/slkdesignsjewelrysnapshot.png");
+  background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    margin:0 auto;
+      width:40%;
+//      transition: all 3s ease-in .5s;
+//      -moz-transition:all 3s ease-in .5s;
+//      -ms-transition:all 3s ease-in .5s;
+//      -o-transition: all 3s ease-in .5s;
+    }
+#pImg.slideLeft {
+  margin:0;
+
+  //  float:left;
+  //  transform:translate(-40%,0px);
+}
+#p1D {
+      color:$darkBlue;}
+.pDisc {display:none;
+  justify-content: center;
+  align-items: center;
+      width:0;
+      color:white;
+      line-height:1.5;}
+
+    //  -webkit-transition: 10s;
+    //  -moz-transition: 10s;
+    ////  -ms-transition: 10s;
+    //  -o-transition: 10s;
+    //  transition: 10s;}
+
+      .pDisc.appear {
+        color:$darkBlue;
+        width:40%;
+
+
+      }
+#p2L:hover  header {display:none;}
+  /*background-image: url("../images/colmarAcademyMobile2.png");}*/
+
+footer {border-top: 2.5px solid $darkBlue;
+        border-bottom: 5px solid $darkBlue;
+        color:$darkBlue;}
+#social {justify-content: center;}
+#social li {display:inline;}
+#contact {text-align: center;
+          color: $color1;
+        padding-bottom: 1rem;}
+#contact h2 {border: 1px solid $darkBlue;
+              color:$darkBlue;
+              text-align: center;
+              margin-top:1rem;
+              padding: 1rem 0 1rem 0;
+              font-size: 1.75rem;
+            font-family:"Playfair Display";
+            margin:2rem auto;
+            margin-bottom: 1rem;
+            width:40%;}
+#contact p {margin:2rem;}
+
+.projArr {justify-content: center;}
+
+
+
+@media only screen and (max-width:1695px){
+
+  #about {padding-top:0;}
+
+
+}
+@media only screen and (max-width:1380px){
+  #pImg {width:48%;}
+  .pDisc {width:48%;}
+  header {padding:.25rem 0;}
+  #about {margin:5rem auto;
+          width:95vw;}
+
+#about span {font-size:1rem;}
+#aboutC {min-height:20rem;
+        height:67vh;}
+#aboutI {padding-top:4rem;}
+#aboutImg {width:180px;}
+.scroll {padding-top:2rem;}
+nav ul li {font-size:1.75rem;}
+#portfolio h1 {font-size:1.75rem;}
+#pImg {width:30%;}
+#pImg.larger {width:50%;}
+}
+
+@media only screen and (max-width:1000px){
+  nav ul li, #contact h2, #portfolio h2 {font-size: 1.5rem;}
+ .title {font-size:1.25rem;}
+  main {padding:0;}
+ #aboutImg {width:225px;}
+ .element {shape-outside: ellipse(108px 251px at 52.44% 50.77%);}
+ #aboutI {padding-top:3rem;}
+ #about span {font-size:1rem;}
+ #projectC {width:100%;}
+ #about{margin:2rem auto;}
+ .scroll {padding-top:1rem;}
+
+}
+@media only screen and (max-width:985px){
+
+}
+@media only screen and (max-width:800px){
+  .projArr p {padding:1rem 1rem;
+            font-size:.9rem;}
+  #projectC {flex-direction:column;
+            align-items: center;}
+  #pImg{height:400px;}
+  #pImg,.pDisc,.pDisc.appear {width:90%;}
+}
+@media only screen and (max-width:690px){
+  nav ul li, #contact h2, #portfolio h2 {font-size: 1rem;}
+  body {padding:0;}
+  main {border: none;}
+}
+
+
+@media only screen and (max-width:480px){
+  #about {width:95%;}
+  #aboutC {padding-right:1rem;}
+  nav ul li {font-size: 1.15rem;
+            margin:.5rem .5rem .5rem 0;}
+#portfolio{margin-top:0;}
+  #portfolio h2,#contact h2 {padding:.5rem 0 .5rem 0;}
+
+
+  #contact h2 {margin-bottom:.25rem;}
+
+  #contact p {margin:1rem;
+              }
+#contact a {color: $darkBlue;}
+footer {margin-bottom: .5rem;}
+#about {width:100%;
+        margin-bottom:1rem;
+        }
+#aboutC {padding-right:1.5rem;border:none;}
+.desktop{display:none;}
+.mobile {display:block;}
+#portfolio h1 {margin-top:0;
+              margin-bottom:.5rem;}
+.projArrM {display:flex;
+          justify-content: space-around;
+          margin-bottom:1rem;}
+.pN {display:none;}
+#p0L {opacity:.5;}
+#p1N {display:block;
+      }
+#p1D {display:block;}
+
+#p1L:active { }
+main {
+  margin-top:2rem;
+  margin-bottom:4rem;}
+#navIcon {font-size: 2rem;
+          color:$color13;
+          margin-left:1rem;}
+
+#headerContentM {border:none;padding:0;
+
+                }
+
+.scroll{display:none;}
+#projectC {border:none;
+          height:auto;}
+.projArrM {margin-bottom:0;}
+
+.dropdown {position:relative;
+  display:block;}
+.mobileNav{
+  display:none;
+
+  background-color: white;
+z-index:1;
+padding:.25rem 0;
+width:90%;
+  margin:0 auto;
+
+
+}
+.mobileNav ul{display:flex;
+  justify-content: space-around;
+  margin:0 auto;}
+.mobileNav a {}
+
+
+.dropdown:hover .mobileNav {display:block;
+margin:0 auto;
+
+                            }
+
+
+
+footer {border:none;
+        margin-bottom:0;}
+footer.mobile {
+  font-family:"Playfair Display";
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  border-bottom:none;
+  border-top:1.5px solid $darkBlue;
+  padding-bottom:.5rem;
+}
+footer.mobile h1 {color:$color13;
+    text-align: center;
+    padding:.25rem 0;
+
+    }
+}

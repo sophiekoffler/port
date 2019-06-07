@@ -1,0 +1,240 @@
+$modalColor : #E89B68;
+$headerColor: #BF817A;
+
+html {font-size: 16px;
+      scroll-behavior: smooth;}
+body{font-family: "Libre Baskerville";
+      margin:0 auto;}
+
+$contentGap : 3rem;
+.horizontal {display:flex;}
+.vertical {display:flex;
+            flex-direction: column;}
+.grid {display:grid;}
+.mobile {display:none;}
+.container {margin:0 auto;
+            width:90vw;}
+
+nav ul li  {font-size:1.5rem;
+            display:inline;
+            margin-right:1rem;
+            font-family: "Libre Baskerville"}
+
+header {z-index:10;
+        padding-top:1rem;
+        padding-bottom:.5rem;
+        border-bottom:black solid 1px;
+        position:sticky;
+        position: -webkit-sticky; //ios
+        top:0;
+        width:100%;
+        background-color:#BF817A;
+        color:#402B29}
+//#aboutL {color:#FFBF80}
+header a:hover {//color:#805652
+                color:#FFBF80}
+//header a:active {//color:#FF9F80
+//  color:#FFBF80
+              //  }
+  nav ul li a.current {
+    color:#FFBF80;
+  }
+  .current {color:#FF9F80}
+#about {background-color:#8f6c69; //#805652;
+        height:65vh;
+        margin-top:2rem;
+      //  padding-top:2rem;
+      //  padding-bottom:2rem;
+      line-height: 1.5;
+        justify-content: center;
+      color:black}
+#aboutI {width:90%;
+        margin:0 auto;
+}
+#about,#aboutI {margin-top:$contentGap}
+#aboutTop{padding-top:0;}
+#imgC {justify-content: center;
+      }
+#aboutImg {width:300px;height:auto;}
+
+.scroll {font-family: "Dancing Script";
+        text-align:right;
+        font-size: 2rem;
+        padding-right:5rem;
+        padding-top:5rem;
+        padding-bottom:7rem;}
+h1 {font-size: 2rem;
+    text-align: center;
+    margin-bottom:1rem;
+  font-family: "Dancing Script"}
+    #projects {
+              margin:0 auto;
+              width:80vw;
+              height:80vh;
+              margin-bottom:$contentGap;
+            //border:blue solid 1px;
+              grid-template-columns: repeat(3,1fr);
+              grid-template-rows: 50% 50%;
+              grid-gap:.5rem;
+              position:relative;
+              }
+    //.projRow {width:80%;
+  //    justify-content: space-around;
+  //  }
+.project {border:black solid 1px;
+        justify-content: center;
+        align-items: center;
+        position:relative;
+
+    }
+.project img{object-fit:contain;
+  width: 100%;
+  max-height: 100%;
+
+ }
+ section {padding-top:4rem;}
+ #modal{display:none;
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin-right:-50%;
+        transform:translate(-50%,-50%);
+        width:50vw;
+        height:80vh;
+
+        //Libre+Baskerville|Playfair+Display|Quicksand|Roboto+Mono
+        //background-color:black;
+        //background-color:#BF817A;
+        background-color: #E89B68;
+        padding:1rem;
+        border:$headerColor solid 3px;}
+#close {justify-content: flex-end;}
+#modalC {justify-content: center;
+        align-items: center;}
+#imgC2 {height:43vh;
+      width:23vw;
+      justify-content: center;}
+#projImg {max-width: 100%;
+          max-height: 100%;
+          margin:0 auto;
+          border:black solid 1px;}
+#projDesc { margin-top:2rem;
+          padding:1rem;
+          background-color: white;
+          border:black solid 1px;
+          line-height: 1.5;}
+ #p1 {grid-area:1/1/2/2;}
+ #p2 {grid-area:1/2/2/3;}
+ #p3 {grid-area:1/3/2/4;}
+ #p4 {grid-area:2/1/3/2;}
+ #p5 {grid-area:2/2/3/3;}
+ #p6 {grid-area:2/3/2/4;}
+.pInfo {align-items: center;
+        justify-content: center;
+font-weight: bold;height:100%; width:100%;
+        }
+.projectInfo {display:none;  height:100%; width:100%;
+              border:black solid 1px;}
+
+.pInfo ul {margin-top:1rem;}
+.pInfo h2 {font-size: 1.25rem;}
+.pInfo ul li {margin-top:.25rem;}
+@mixin opaque {opacity: 0.25; filter: alpha(opacity=25); /* For IE8 and earlier */}
+ #p1:hover img {@include opaque}
+ #p2:hover img {@include opaque}
+ #p3:hover img {@include opaque}
+ #p4:hover img {@include opaque}
+ #p5:hover img {@include opaque}
+ #p6:hover img{@include opaque}
+@mixin overlay {display:block;position:absolute;top:0;left:0;
+}
+#p1:hover #p1I{@include overlay}
+#p2:hover #p2I{@include overlay}
+#p3:hover #p3I{@include overlay}
+#p4:hover #p4I{@include overlay}
+#p5:hover #p5I{@include overlay}
+#p6:hover #p6I{@include overlay}
+
+button {margin:1.5rem; font-weight: bold;
+        padding:.5rem;
+        }
+//footer {background-color:#8f6c69;}
+
+#contact {height:85vh;
+  background-color:#8f6c69;}
+@media  only screen and (max-width:1500px){
+  nav ul li {font-size:1.25rem;}
+  header {padding-top:.5rem;
+          padding-bottom:.25rem;}
+  .container {width:95vw;}
+  #about {flex-direction:row;
+          padding:1rem;
+          align-items: center;}
+          #about,#aboutI {margin-top:2rem}
+  #imgC {width:200px;height:200px;
+          margin-right:1rem;}
+ #aboutImg {max-width:100%;
+max-height:100%;}
+  .scroll {padding-top:2rem;}
+
+  #modal{padding:.25rem;
+        width:90vw;
+        font-size: .9rem;
+    }
+    #imgC2 {}
+}
+@media only screen and (max-width:1000px){
+  .container {width:98vw;
+        }
+  #about {height:auto;}
+  #projects {width:95vw;
+            height:90vh;
+          grid-template-columns:1fr 1fr;
+          grid-template-rows:33.3% 33.3% 33.3%;
+        }
+        #p1 {grid-area:1/1/2/2;}
+        #p2 {grid-area:1/2/2/3;}
+        #p3 {grid-area:2/1/3/2;}
+        #p4 {grid-area:2/2/3/3;}
+        #p5 {grid-area:3/1/4/2;}
+        #p6 {grid-area:3/2/4/3;}
+    #imgC2 {width:40vw;
+            height:auto;
+          }
+          #modal{height:auto;}
+}
+
+@media only screen and (max-width:800px){
+  #about {flex-direction: column;}
+  #scroll{display:none;}
+  #portfolio {margin-top:1rem;
+              margin-bottom:1rem;}
+  h1{margin-bottom:1rem;
+      font-size:1.25rem;
+      font-weight: bold;}
+  #about {margin:.25rem 0;
+         padding:1rem .25rem;}
+        #imgC2 {width:50vw;}
+}
+@media only screen and (max-width:480px){
+  .container {width:100vw;
+        }
+  #headerContent {width:95vw;
+            margin:0 auto;}
+  #contact {width:95vw;
+            margin:0 auto;}
+  nav ul li {font-size:1rem;}
+  body{font-size:.9rem;}
+#imgC2 {width:80vw;}
+  #projects {width:95vw;
+            height:180vh;
+          grid-template-columns:1fr;
+          grid-template-rows:16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+        }
+        #p1 {grid-area:1/1/2/2;}
+        #p2 {grid-area:2/1/3/2;}
+        #p3 {grid-area:3/1/4/2;}
+        #p4 {grid-area:4/1/5/2;}
+        #p5 {grid-area:5/1/6/2;}
+        #p6 {grid-area:6/1/7/2;}
+}
