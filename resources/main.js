@@ -49,9 +49,22 @@ document.body.onload = function(){
 
 let currSection = "#about";
 
+document.getElementById("about").addEventListener('touchend', e => { document.getElementById("portfolioL").classList.remove("current");
+  document.getElementById("aboutL").classList.add("current");
+  currSection = "#about";
+
+});
+
 document.getElementById("about").addEventListener('mouseenter', e => { document.getElementById("portfolioL").classList.remove("current");
   document.getElementById("aboutL").classList.add("current");
   currSection = "#about";
+
+});
+
+document.getElementById("contact").addEventListener('touchend', e => {
+console.log("moues entered");  document.getElementById("portfolioL").classList.remove("current");
+  document.getElementById("contactL").classList.add("current");
+  currSection = "#contact";
 
 });
 
@@ -63,6 +76,13 @@ console.log("moues entered");  document.getElementById("portfolioL").classList.r
 });
 document.getElementById("portfolio").addEventListener('mouseenter', e => {
 console.log("moues entered");  document.getElementById('contactL').classList.remove("current");
+document.getElementById('aboutL').classList.remove("current");
+  document.getElementById("portfolioL").classList.add("current");
+  currSection = "#portfolio";
+
+});
+document.getElementById("portfolio").addEventListener('touchend', e => {
+ document.getElementById('contactL').classList.remove("current");
 document.getElementById('aboutL').classList.remove("current");
   document.getElementById("portfolioL").classList.add("current");
   currSection = "#portfolio";
